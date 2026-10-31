@@ -223,3 +223,12 @@ textarea{min-height:130px;resize:vertical}
 .case-vid .tag{display:none}
 @media(max-width:1000px){.case{grid-template-columns:180px 1fr}.case-vid{grid-column:1/-1;width:100%;max-width:300px;margin:0 auto}}
 @media(max-width:640px){.case{grid-template-columns:1fr;padding:22px;text-align:center}.case-logo{max-width:180px;margin:0 auto}.case-tags,.case-links{justify-content:center}}
+.ultimo-info{color:var(--txt)!important;font-size:15px}
+.ultimo-info b{color:var(--or2)}
+.em-breve{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px dashed var(--or)}
+.em-breve img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.em-breve span{position:absolute;inset:auto 0 18px;text-align:center;font-family:Sora;font-weight:700;font-size:20px;line-height:1.2}
+nav ul{gap:22px}
+nav ul a{white-space:nowrap}
+@media(max-width:1060px){nav ul{display:none}}
+[hidden]{display:none!important}

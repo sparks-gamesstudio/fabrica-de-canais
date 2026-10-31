@@ -40,6 +40,7 @@
     <ul>
       <li><a href="index.html#como-funciona">Como funciona</a></li>
       <li><a href="index.html#case">Case</a></li>
+      <li><a href="index.html#nosso-canal">Nosso canal</a></li>
       <li><a href="index.html#exemplos">Exemplos</a></li>
       <li><a href="quem-somos.html">Quem somos</a></li>
       <li><a href="contato.html">Contato</a></li>
@@ -131,6 +132,31 @@
     </div>
   </section>
 
+  <!-- CANAL DA FÁBRICA -->
+  <section id="nosso-canal" style="padding-top:20px">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Nosso canal</span>
+        <h2 class="h2">A Fábrica também <span class="grad">posta todo dia.</span></h2>
+      </div>
+      <article class="case reveal">
+        <div class="case-logo"><img src="assets/fabrica-perfil.jpg" alt="Perfil da Fábrica de Canais" width="512" height="512"></div>
+        <div class="case-body">
+          <span class="case-handle">@afabricadecanais</span>
+          <h3>Fábrica de Canais</h3>
+          <p>Aqui o Rebite, o operário da Fábrica, mostra na prática como usar IA para criar vídeos, automatizar tarefas chatas e manter um canal no piloto automático. Todos os vídeos são feitos pela própria Fábrica.</p>
+          <p id="ultimo-info" class="ultimo-info">Último vídeo: <b>primeiro vídeo saindo em breve.</b></p>
+          <div class="case-links">
+            <a class="btn btn-or" href="https://www.instagram.com/afabricadecanais/" target="_blank" rel="noopener">◎ Seguir no Instagram</a>
+            <a class="btn btn-gh" id="ultimo-link" href="https://www.instagram.com/afabricadecanais/" target="_blank" rel="noopener" hidden>Ver o post →</a>
+          </div>
+        </div>
+        <div class="vid case-vid" id="ultimo-vid" hidden><video playsinline preload="none" aria-label="Último vídeo do canal Fábrica de Canais"></video><span class="play"><i></i></span></div>
+        <div class="case-vid em-breve" id="ultimo-breve"><img src="assets/rebite.jpg" alt="Rebite, mascote da Fábrica"><span>Primeiro vídeo<br>em breve</span></div>
+      </article>
+    </div>
+  </section>
+
   <!-- VITRINE -->
   <section id="exemplos" style="padding-top:20px">
     <div class="wrap">
@@ -204,6 +230,20 @@
     });
     v.addEventListener('ended', function () { card.classList.remove('on'); });
   });
+  // último vídeo do canal da Fábrica (assets/canal/ultimo.json, trocado pela rotina de publicação)
+  fetch('assets/canal/ultimo.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (u) {
+    if (!u) return;
+    var box = document.getElementById('ultimo-vid'), v = box.querySelector('video');
+    v.src = 'assets/canal/ultimo.mp4?v=' + u.id;
+    v.poster = 'assets/canal/ultimo.jpg?v=' + u.id;
+    box.hidden = false;
+    document.getElementById('ultimo-breve').hidden = true;
+    var info = document.getElementById('ultimo-info');
+    info.textContent = 'Último vídeo: ';
+    var b = document.createElement('b'); b.textContent = u.titulo; info.appendChild(b);
+    var link = u.links && (u.links.instagram || u.links.youtube || u.links.tiktok);
+    if (link) { var a = document.getElementById('ultimo-link'); a.href = link; a.hidden = false; }
+  }).catch(function () {});
   // aparecer ao rolar
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
