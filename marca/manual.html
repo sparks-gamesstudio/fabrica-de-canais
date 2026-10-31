@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual da marca — Fábrica de Canais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a09;--bg2:#13110f;--card:#191613;--line:#2a2520;--txt:#f3ede6;--mut:#a59a8f;--or:#d97757;--or2:#f0a07f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:56px 20px}
+h1,h2,h3{font-family:Sora,sans-serif;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(34px,5vw,56px)}
+h2{font-size:28px;margin:72px 0 8px}
+.sub{color:var(--mut);max-width:680px}
+.grid{display:grid;gap:16px;margin-top:22px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g6{grid-template-columns:repeat(6,1fr)}
+@media(max-width:800px){.g2,.g3{grid-template-columns:1fr}.g6{grid-template-columns:repeat(3,1fr)}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;place-items:center;min-height:180px;gap:12px}
+.box.light{background:#f3ede6}
+.box img{max-height:110px;max-width:100%}
+.cap{font-size:13px;color:var(--mut);text-align:center}
+.box.light .cap{color:#6f665d}
+.sw{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.sw div{height:110px}
+.sw p{margin:0;padding:12px 14px;font-size:13px;background:var(--card)}
+.sw b{display:block;font-family:Sora}
+.type{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.mas img{border-radius:14px;border:1px solid var(--line);width:100%;aspect-ratio:9/16;object-fit:cover}
+ul{color:var(--mut);padding-left:20px}
+li b{color:var(--txt)}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.dodont div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.dodont h3{font-size:17px;margin-bottom:6px}
+@media(max-width:700px){.dodont{grid-template-columns:1fr}}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--or2);border:1px solid var(--line);padding:4px 10px;border-radius:99px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">Manual da marca · v1 · out/2026</span>
+  <h1 style="margin-top:14px">Fábrica de Canais</h1>
+  <p class="sub">Tudo o que define como a marca aparece: logo, cores, letras, mascote e jeito de falar. Use este guia em site, vídeos, posts, capas e materiais.</p>
+
+  <h2>1. Essência</h2>
+  <p class="sub"><b style="color:var(--txt)">Promessa:</b> seu canal postando todo dia, sem você aparecer.<br>
+  <b style="color:var(--txt)">O que vendemos:</b> constância. Nunca fama, renda ou atalho.<br>
+  <b style="color:var(--txt)">Personalidade:</b> uma oficina organizada e bem-humorada: técnica sem ser chata, direta sem ser fria, honesta sempre.</p>
+
+  <h2>2. Logo</h2>
+  <p class="sub">O símbolo junta a <b style="color:var(--txt)">engrenagem</b> (a fábrica, a automação) com o <b style="color:var(--txt)">play</b> (o vídeo). É o mesmo selo que o mascote leva no peito.</p>
+  <div class="grid g3">
+    <div class="box"><img src="logo-horizontal.svg" alt="Logo horizontal"><span class="cap">Horizontal — uso principal (fundo escuro)</span></div>
+    <div class="box light"><img src="logo-horizontal-escuro.svg" alt="Logo horizontal escuro"><span class="cap">Horizontal — fundo claro</span></div>
+    <div class="box"><img src="logo-empilhado.svg" alt="Logo empilhado" style="max-height:140px"><span class="cap">Empilhado — capas, vídeos, quadrados</span></div>
+    <div class="box"><img src="simbolo.svg" alt="Símbolo"><span class="cap">Símbolo — favicon, marca d'água, selo</span></div>
+    <div class="box" style="background:var(--or)"><img src="simbolo-branco.svg" alt="Símbolo branco"><span class="cap" style="color:#3a1a0e">Símbolo branco — sobre laranja</span></div>
+    <div class="box"><img src="avatar-1024.png" alt="Avatar" style="border-radius:50%;max-height:120px"><span class="cap">Avatar — foto de perfil nas redes</span></div>
+  </div>
+  <ul style="margin-top:18px">
+    <li><b>Respiro:</b> deixe em volta do logo um espaço livre do tamanho do play.</li>
+    <li><b>Tamanho mínimo:</b> símbolo com 24 px; logo horizontal com 120 px de largura.</li>
+    <li><b>Não faça:</b> esticar, girar, trocar as cores, pôr sombra ou colocar sobre fotos sem contraste.</li>
+  </ul>
+
+  <h2>3. Cores</h2>
+  <div class="grid g6">
+    <div class="sw"><div style="background:#d97757"></div><p><b>Laranja Fábrica</b>#D97757 · destaque, botões</p></div>
+    <div class="sw"><div style="background:#f0a07f"></div><p><b>Laranja claro</b>#F0A07F · detalhes, hover</p></div>
+    <div class="sw"><div style="background:#0b0a09"></div><p><b>Carvão</b>#0B0A09 · fundo principal</p></div>
+    <div class="sw"><div style="background:#191613"></div><p><b>Grafite</b>#191613 · cartões</p></div>
+    <div class="sw"><div style="background:#f3ede6"></div><p><b>Areia</b>#F3EDE6 · texto, fundo claro</p></div>
+    <div class="sw"><div style="background:#a59a8f"></div><p><b>Pedra</b>#A59A8F · texto secundário</p></div>
+  </div>
+  <p class="sub" style="margin-top:14px">Regra: <b style="color:var(--txt)">fundo escuro, um único laranja.</b> O laranja aparece pouco e sempre no que importa (botão, palavra-chave, número).</p>
+
+  <h2>4. Tipografia</h2>
+  <div class="grid g2">
+    <div class="type"><div style="font-family:Sora;font-weight:800;font-size:44px;line-height:1">Sora</div><p class="sub">Títulos, números, logo. Pesos 700–800, espaçamento levemente fechado.</p></div>
+    <div class="type"><div style="font-family:Inter;font-weight:500;font-size:44px;line-height:1">Inter</div><p class="sub">Textos, botões, legendas. Pesos 400–600.</p></div>
+  </div>
+  <p class="sub" style="margin-top:14px">Nos vídeos, as legendas seguem o padrão do motor (pílula escura, palavra-chave em amarelo) e as capas usam letras grossas com contorno.</p>
+
+  <h2>5. Mascote — Rebite</h2>
+  <p class="sub">O <b style="color:var(--txt)">Rebite</b> é o operário da Fábrica: um robozinho com cabeça de TV (o rosto aparece na tela), capacete de obra, antena e macacão laranja com o selo da marca. Ele apresenta os vídeos do canal, aparece no site e nos materiais. Arquivo: <code>Motor/js/mascote-rebite.js</code>.</p>
+  <div class="grid g6 mas">
+    <figure style="margin:0"><img src="mascote-acenar.jpg" alt="Rebite acenando"><figcaption class="cap">acenar</figcaption></figure>
+    <figure style="margin:0"><img src="mascote-joinha.jpg" alt="Rebite fazendo joinha"><figcaption class="cap">joinha</figcaption></figure>
+    <figure style="margin:0"><img src="mascote-pensar.jpg" alt="Rebite pensando"><figcaption class="cap">pensar</figcaption></figure>
+    <figure style="margin:0"><img src="mascote-comemorar.jpg" alt="Rebite comemorando"><figcaption class="cap">comemorar</figcaption></figure>
+    <figure style="margin:0"><img src="mascote-bravo.jpg" alt="Rebite bravo apontando"><figcaption class="cap">apontar · bravo</figcaption></figure>
+    <figure style="margin:0"><img src="mascote-adesivo.jpg" alt="Rebite como adesivo"><figcaption class="cap">adesivo (sobreposto)</figcaption></figure>
+  </div>
+  <ul style="margin-top:18px">
+    <li><b>Personalidade:</b> trabalhador, curioso e animado. Explica o técnico com analogias de fábrica ("essa skill é a esteira", "a rotina é o turno da noite").</li>
+    <li><b>Bordões possíveis:</b> "Bora pra esteira!" · "Turno encerrado." · "Mais um saindo do forno."</li>
+    <li><b>Sempre:</b> macacão laranja com o selo, capacete laranja, rosto claro na tela escura.</li>
+    <li><b>Nunca:</b> trocar a cor do macacão, tirar o capacete ou usar o Rebite para prometer dinheiro.</li>
+  </ul>
+
+  <h2>6. Voz</h2>
+  <div class="dodont">
+    <div><h3>✓ Fala assim</h3><ul><li>"Seu canal posta enquanto você dorme."</li><li>"Funciona assim: …" (mostra o processo)</li><li>"Você precisa de uma placa NVIDIA." (transparente)</li><li>Frases curtas, português do dia a dia, exemplos concretos.</li></ul></div>
+    <div><h3>✗ Não fala assim</h3><ul><li>"Fique rico com canais dark!"</li><li>"Renda passiva garantida."</li><li>"Segredo que ninguém te conta."</li><li>Jargão sem explicação, exagero, urgência falsa.</li></ul></div>
+  </div>
+
+  <h2>7. Aplicações</h2>
+  <ul>
+    <li><b>Perfis nas redes:</b> foto = avatar laranja sobre carvão; nome = Fábrica de Canais; bio começa pela promessa.</li>
+    <li><b>Capas de vídeo:</b> fundo da cena, título em 3 linhas com a palavra-chave em laranja ou amarelo, o Rebite no canto quando fizer sentido.</li>
+    <li><b>Site:</b> fundo carvão, títulos em Sora com gradiente areia → laranja, um botão laranja por seção.</li>
+    <li><b>Marca d'água nos vídeos:</b> símbolo branco a 60% no canto superior.</li>
+  </ul>
+</div>
+</body>
+</html>

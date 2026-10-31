@@ -26,6 +26,7 @@ section{padding-block:96px;position:relative;scroll-margin-top:72px}
 nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,10,9,.72);border-bottom:1px solid rgba(255,255,255,.05)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .logo{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:700;font-size:18px}
+.logo img{display:block;filter:drop-shadow(0 0 10px rgba(217,119,87,.45))}
 .logo i{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--or),#ffcfb8,var(--or));display:grid;place-items:center;font-style:normal;color:#1a0f0a;font-size:15px;box-shadow:0 0 22px var(--glow)}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--mut)}
 nav ul a:hover{color:var(--txt)}
