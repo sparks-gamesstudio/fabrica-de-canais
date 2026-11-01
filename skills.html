@@ -221,7 +221,7 @@
 
 <script>
   // ÚNICO lugar para colar o link do checkout da Kiwify. Vazio = botões mostram "em breve".
-  var KIWIFY = "";
+  var KIWIFY = "https://pay.kiwify.com.br/GxCUqZm";
   document.querySelectorAll('.comprar').forEach(function (a) {
     if (KIWIFY) { a.href = KIWIFY; a.target = '_blank'; a.rel = 'noopener'; }
     else if (!a.closest('nav')) { a.setAttribute('aria-disabled', 'true'); a.textContent = 'Vendas abrindo em breve'; }
