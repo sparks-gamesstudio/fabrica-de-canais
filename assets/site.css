@@ -232,3 +232,13 @@ nav ul{gap:22px}
 nav ul a{white-space:nowrap}
 @media(max-width:1060px){nav ul{display:none}}
 [hidden]{display:none!important}
+
+/* capa do pack como caderno 3D (skills.html e home) */
+.caderno{justify-self:center;perspective:1400px;padding:30px 20px}
+.caderno .livro{position:relative;width:250px;aspect-ratio:744/1052;transform:rotateY(-24deg) rotateX(6deg) rotateZ(1deg);transform-style:preserve-3d;transition:transform .5s ease}
+.caderno:hover .livro{transform:rotateY(-10deg) rotateX(3deg)}
+.caderno .livro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px 10px 10px 3px;transform:translateZ(14px);box-shadow:3px 3px 0 -1px #efe8de,6px 6px 0 -2px #d9d0c4,9px 9px 0 -3px #c4baad,12px 14px 30px rgba(0,0,0,.55)}
+.caderno .livro::after{content:"";position:absolute;inset:0;border-radius:3px 10px 10px 3px;background:#1a1512;transform:translateZ(-14px);box-shadow:30px 40px 60px rgba(0,0,0,.6),0 0 90px rgba(217,119,87,.28)}
+.caderno .lombada{position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(255,255,255,.08) 60%,transparent);transform:translateZ(14.5px);border-radius:3px 0 0 3px;pointer-events:none}
+.caderno-p{padding:10px 30px}
+.caderno-p .livro{width:170px}
