@@ -30,7 +30,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo i{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--or),#ffcfb8,var(--or));display:grid;place-items:center;font-style:normal;color:#1a0f0a;font-size:15px;box-shadow:0 0 22px var(--glow)}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--mut)}
 nav ul a:hover{color:var(--txt)}
-nav .btn{padding:10px 18px;font-size:14px}
+nav .btn{padding:10px 18px;font-size:14px;white-space:nowrap;flex-shrink:0}
 .logo{white-space:nowrap}
 @media(max-width:860px){nav ul{display:none}}
 @media(max-width:520px){nav .btn .long{display:none}.logo{font-size:16px}}
@@ -242,3 +242,47 @@ nav ul a{white-space:nowrap}
 .caderno .lombada{position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(255,255,255,.08) 60%,transparent);transform:translateZ(14.5px);border-radius:3px 0 0 3px;pointer-events:none}
 .caderno-p{padding:10px 30px}
 .caderno-p .livro{width:170px}
+/* nav: com 8 itens, o botão encurta antes de quebrar linha */
+@media(max-width:1180px){nav ul{gap:20px}nav .btn .long{display:none}nav .btn .short{display:inline}}
+
+/* faixa do GitHub (home) */
+.gh-band{margin-top:56px;border-block:1px solid var(--line);background:linear-gradient(90deg,#0d1117 0%,var(--bg2) 55%,rgba(217,119,87,.14) 100%);position:relative;overflow:hidden}
+.gh-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:18px 18px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 70%);mask-image:linear-gradient(90deg,#000,transparent 70%);pointer-events:none}
+.gh-band-in{position:relative;display:flex;align-items:center;gap:28px;padding-block:26px}
+.gh-band-logos{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.gh-ic{width:52px;height:52px;border-radius:14px;background:#f3ede6;color:#0d1117;display:grid;place-items:center}
+.gh-x{color:var(--dim);font-size:20px}
+.gh-band-txt{flex:1;min-width:0;display:grid;gap:2px}
+.gh-band-txt b{font-family:Sora;font-size:clamp(20px,2.4vw,28px);line-height:1.2}
+.gh-band-txt>span{color:var(--mut);font-size:15px}
+.gh-band-btns{display:flex;gap:10px;flex-shrink:0}
+.gh-band-btns .btn{padding:11px 18px;font-size:15px}
+@media(max-width:860px){.gh-band-in{flex-wrap:wrap;justify-content:center;text-align:center}.gh-band-txt{flex-basis:100%}.gh-band-btns{flex-wrap:wrap;justify-content:center}}
+
+/* página GitHub */
+.gh-hero{position:relative;overflow:hidden;padding-block:72px 40px}
+.gh-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 20%,transparent 70%);pointer-events:none}
+.gh-hero::after{content:"";position:absolute;right:-200px;top:-200px;width:800px;height:800px;background:radial-gradient(circle,var(--glow),transparent 60%);filter:blur(30px);pointer-events:none}
+.gh-hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.gh-hero h1{font-size:clamp(36px,5.4vw,64px);line-height:1.05;margin:18px 0 16px}
+.gh-hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.gh-url{margin-top:18px;color:var(--dim);font-family:ui-monospace,Consolas,monospace;font-size:14px}
+.gh-url b{color:var(--or2);font-weight:500}
+.gh-art{position:relative;min-height:440px}
+.gh-win{position:absolute;left:0;top:30px;width:78%;background:#0d1117;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -20px #000;font-family:ui-monospace,Consolas,monospace;font-size:14px;z-index:1}
+.gh-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.gh-bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.gh-bar i:first-child{background:var(--or)}
+.gh-bar span{margin-left:8px;color:var(--dim);font-size:12px}
+.gh-win pre{margin:0;overflow-wrap:anywhere;padding:18px 18px 26px;color:#c9d1d9;white-space:pre-wrap;line-height:1.8}
+.gh-win .c{color:var(--dim)}
+.gh-win b{color:var(--or2)}
+.gh-win .cur{color:var(--or);animation:pisca 1s steps(1) infinite}
+@keyframes pisca{50%{opacity:0}}
+.gh-rebite{position:absolute;right:-10px;bottom:-20px;width:58%;z-index:2;-webkit-mask-image:radial-gradient(ellipse 55% 60% at 50% 55%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 55% 60% at 50% 55%,#000 60%,transparent 100%)}
+.gh-chip{left:8%;bottom:30px;z-index:3}
+.gh-chip small{color:var(--mut)}
+.gh-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.gh-n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--or);color:#1a0f0a;font-family:Sora;font-weight:800;margin-bottom:12px}
+@media(max-width:860px){.gh-hero-in{grid-template-columns:1fr}.gh-art{min-height:380px;max-width:480px;width:100%;margin:0 auto}.gh-steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.gh-win .cur{animation:none}}
